@@ -6,7 +6,7 @@
 /*   By: alappas <alappas@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 02:58:37 by alappas           #+#    #+#             */
-/*   Updated: 2024/01/26 00:29:59 by alappas          ###   ########.fr       */
+/*   Updated: 2024/01/26 22:09:16 by alappas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ void	PhoneBook::print_contacts()
 {
 	int	i = -1;
 	int	index = -1;
+	std::string check;
 	
-
 	std::cout << "|    INDEX|      NAME|   SURNAME|  NICKNAME|" << std::endl;
 	std::cout << "--------------------------------------------" << std::endl;
 	while (PhoneBook::num > ++i)
@@ -55,12 +55,20 @@ void	PhoneBook::print_contacts()
 	std::cout << std::endl << "Which number do you want to highlight?" << std::endl;
 	while (!(index >= 0 && index <= 7))
 	{
-			std::cout << "Please type a valid index value from 0 to 7" << std::endl;
+			std::cout << "Please type a valid index value from 1 to 8" << std::endl;
 			std::cin >> index;
+			std::getline(std::cin, check);
 			if (std::cin.fail())
 			{
+				std::cout << "Only numeric symbols allowed!" << std::endl;
 				std::cin.clear();
 				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+				index = -1;
+			}
+			if (check[0])
+			{
+				std::cin.clear();
+				std::cout << "Only single character is allowed!" << std::endl;
 				index = -1;
 			}
 	}

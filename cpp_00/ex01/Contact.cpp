@@ -6,7 +6,7 @@
 /*   By: alappas <alappas@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 02:58:29 by alappas           #+#    #+#             */
-/*   Updated: 2024/01/26 00:19:09 by alappas          ###   ########.fr       */
+/*   Updated: 2024/01/26 22:09:44 by alappas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,14 @@ std::string Contact::setlastname()
     std::cout << "Type your last name" << std::endl;
     std::getline(std::cin, lastname);
     if (lastname.size() > 0)
+    {
+        if (lastname.size() > 10)
+            {
+                lastname = lastname.substr(0, 10);
+                lastname[9] = '.';
+            }
         return (lastname);
+    }
     else
     {
         std::cout << "The type field can't be empty!" << std::endl;
@@ -84,7 +91,14 @@ std::string Contact::setnickname()
     std::cout << "Type your nickname" << std::endl;
     std::getline(std::cin, nickname);
     if (nickname.size() > 0)
+    {
+        if (nickname.size() > 10)
+            {
+                nickname = nickname.substr(0, 10);
+                nickname[9] = '.';
+            }
         return (nickname);
+    }
     else
     {
         std::cout << "The type field can't be empty!" << std::endl;
