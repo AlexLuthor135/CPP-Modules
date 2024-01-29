@@ -1,8 +1,8 @@
 SRCS		=	main.cpp Zombie.cpp newZombie.cpp \
 				randomChump.cpp
 
-CC_FLAGS		=	-std=c++98 -Wall -Wextra -Werror -g
-CC				=	c++
+CC_FLAGS		= -std=c++98 -Wall -Wextra -Werror -g
+CC				= c++
 OBJS_F			= obj/
 
 

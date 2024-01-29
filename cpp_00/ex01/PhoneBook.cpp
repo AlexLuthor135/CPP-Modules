@@ -6,7 +6,7 @@
 /*   By: alappas <alappas@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 02:58:37 by alappas           #+#    #+#             */
-/*   Updated: 2024/01/26 22:09:16 by alappas          ###   ########.fr       */
+/*   Updated: 2024/01/27 22:08:14 by alappas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,4 @@ void	PhoneBook::print_contacts()
 		getcontact(contact[index]);
 	else
 		std::cout << std::endl << "Number doesn't exist." << std::endl;
-	
 }

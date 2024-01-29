@@ -6,7 +6,7 @@
 /*   By: alappas <alappas@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 04:16:47 by alappas           #+#    #+#             */
-/*   Updated: 2024/01/27 04:31:48 by alappas          ###   ########.fr       */
+/*   Updated: 2024/01/29 19:29:08 by alappas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,19 +34,14 @@ void    Harl::error(void)
 
 void    Harl::complain(std::string level)
 {
-    Harl harl;
-    void (Harl::*debug)() = &Harl::debug;
-    void (Harl::*info)() = &Harl::info;
-    void (Harl::*warning)() = &Harl::warning;
-    void (Harl::*error)() = &Harl::error;
-    if (level == "DEBUG")
-        (harl.*debug)();
-    else if (level == "INFO")
-        (harl.*info)();
-    else if (level == "WARNING")
-        (harl.*warning)();
-    else if (level == "ERROR")
-        (harl.*error)();
-    else
-        std::cout << "Wrong input" << std::endl;
+    void (Harl::*harlptr[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+    std::string words[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+    for (int i = 0; i < 4; i++)
+    {
+        if (words[i] == level)
+        {
+            (this->*harlptr[i])();
+            break ;
+        }
+    }
 }
