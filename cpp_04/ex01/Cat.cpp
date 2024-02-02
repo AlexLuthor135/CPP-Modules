@@ -6,7 +6,7 @@
 /*   By: alappas <alappas@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 02:47:50 by alappas           #+#    #+#             */
-/*   Updated: 2024/02/02 03:19:29 by alappas          ###   ########.fr       */
+/*   Updated: 2024/02/02 20:20:57 by alappas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,15 @@ Cat::Cat()
     this->brain = new Brain();
 }
 Cat::~Cat() {
-    std::cout << "Cat destructor init" << std::endl;
     delete this->brain;
+    std::cout << "Cat destructor init" << std::endl;
 }
 
 Cat& Cat::operator=(const Cat & other){
     std::cout << "Cat copy assignment operator called" << std::endl;
     this->type = other.type;
+    this->brain = new Brain();
+    this->brain->operator=(*other.brain);
     return (*this);
 }
 

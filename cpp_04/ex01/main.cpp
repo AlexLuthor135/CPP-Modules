@@ -6,7 +6,7 @@
 /*   By: alappas <alappas@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 02:41:30 by alappas           #+#    #+#             */
-/*   Updated: 2024/02/02 03:25:29 by alappas          ###   ########.fr       */
+/*   Updated: 2024/02/02 20:19:52 by alappas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,21 @@
 
 int main()
 {
-    Animal *array[10];
-    for (int i = 0; i < 10; i++)
+    // Animal *array[10];
+    // for (int i = 0; i < 10; i++)
+    // {
+    //     if (i % 2 == 0)
+    //         array[i] = new Dog();
+    //     else
+    //         array[i] = new Cat();
+    //     array[i]->makeSound();
+    // }
+    // for (int i = 0; i < 10; i++)
+    //     delete array[i];
+    Dog basic;
     {
-        if (i % 2 == 0)
-            array[i] = new Dog();
-        else
-            array[i] = new Cat();
-        array[i]->makeSound();
+        Dog tmp = basic;
     }
-    for (int i = 0; i < 10; i++)
-        delete array[i];
-    
     // const Animal* meta = new Animal();
     // const Animal* j = new Dog();
     // const Animal* i = new Cat();

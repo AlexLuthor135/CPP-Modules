@@ -6,7 +6,7 @@
 /*   By: alappas <alappas@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 02:55:40 by alappas           #+#    #+#             */
-/*   Updated: 2024/02/02 03:18:50 by alappas          ###   ########.fr       */
+/*   Updated: 2024/02/02 20:21:18 by alappas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,15 @@ Dog::Dog()
     this->brain = new Brain();
 }
 Dog::~Dog() {
-    std::cout << "Dog destructor init" << std::endl;
     delete this->brain;
+    std::cout << "Dog destructor init" << std::endl;
 }
 
 Dog& Dog::operator=(const Dog & other){
     std::cout << "Dog copy assignment operator called" << std::endl;
     this->type = other.type;
+    this->brain = new Brain();
+    this->brain->operator=(*other.brain);
     return (*this);
 }
 
