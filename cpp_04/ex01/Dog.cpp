@@ -6,7 +6,7 @@
 /*   By: alappas <alappas@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 02:55:40 by alappas           #+#    #+#             */
-/*   Updated: 2024/02/02 20:21:18 by alappas          ###   ########.fr       */
+/*   Updated: 2024/02/03 14:20:01 by alappas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Dog& Dog::operator=(const Dog & other){
     std::cout << "Dog copy assignment operator called" << std::endl;
     this->type = other.type;
     this->brain = new Brain();
-    this->brain->operator=(*other.brain);
+    *(this->brain) = *(other.brain);
     return (*this);
 }
 

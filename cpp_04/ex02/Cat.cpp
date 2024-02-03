@@ -6,7 +6,7 @@
 /*   By: alappas <alappas@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 02:47:50 by alappas           #+#    #+#             */
-/*   Updated: 2024/02/02 03:19:29 by alappas          ###   ########.fr       */
+/*   Updated: 2024/02/03 14:20:41 by alappas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ Cat::~Cat() {
 Cat& Cat::operator=(const Cat & other){
     std::cout << "Cat copy assignment operator called" << std::endl;
     this->type = other.type;
+    this->brain = new Brain();
+    *(this->brain) = *(other.brain);
     return (*this);
 }
 
