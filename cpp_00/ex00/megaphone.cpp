@@ -6,11 +6,17 @@
 /*   By: alappas <alappas@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 18:40:22 by alappas           #+#    #+#             */
-/*   Updated: 2023/12/27 22:35:14 by alappas          ###   ########.fr       */
+/*   Updated: 2024/02/07 20:30:46 by alappas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+
+namespace a
+{
+    int i = 2;
+}
+
 
 int main(int argc, char **argv)
 {
@@ -26,5 +32,6 @@ int main(int argc, char **argv)
         std::cout << " ";
     }
     std::cout << std::endl;
+    std::cout << a::i;
     return (0);
 }
