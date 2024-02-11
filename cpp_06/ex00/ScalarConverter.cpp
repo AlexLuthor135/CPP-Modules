@@ -6,7 +6,7 @@
 /*   By: alappas <alappas@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 20:11:06 by alappas           #+#    #+#             */
-/*   Updated: 2024/02/11 03:03:02 by alappas          ###   ########.fr       */
+/*   Updated: 2024/02/11 19:51:04 by alappas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ ScalarConverter& ScalarConverter::operator=(const ScalarConverter & other){
 void ScalarConverter::convert(const std::string string)
 {
 	float	f = 0.0f;
-	if (string.size() == 1 && isalpha(string[0]))
+	if (string.size() == 1 && isprint(string[0]))
 	{
 		const char ch = static_cast<char>(string[0]);
 		f = static_cast<float>(ch);
