@@ -6,7 +6,7 @@
 /*   By: alappas <alappas@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 18:31:47 by alappas           #+#    #+#             */
-/*   Updated: 2024/02/11 19:11:03 by alappas          ###   ########.fr       */
+/*   Updated: 2024/02/11 19:56:50 by alappas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,6 @@ int main(){
     Base *base = generate();
     identify(base);
     identify(*base);
+    delete base;
     return (0);
 }
