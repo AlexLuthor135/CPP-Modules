@@ -7,7 +7,7 @@
 #include <list>
 #include <vector>
 
-template <typename T>
+template <typename T, typename Container = std::deque<T> >
 class MutantStack : public std::stack<T>{
     public:
         MutantStack(){};
@@ -27,7 +27,7 @@ class MutantStack : public std::stack<T>{
     iterator end() {return this->std::stack<T>::c.end();}
 };
 
-// template <typename T1, typename T2>
+// template <typename T1, typename T2 = vector<int>>
 // class SuperMutant : public std::stack<T1, T2>{
 //     public:
 //         SuperMutant(){};
