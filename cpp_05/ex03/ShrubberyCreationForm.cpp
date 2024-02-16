@@ -46,7 +46,9 @@ void    ShrubberyCreationForm::execute(const Bureaucrat &executor) const{
         throw AForm::GradeTooLowException();
     else
     {
-        std::ofstream outputFile(this->_target + "_shrubbery", std::ios::trunc);
+        std::string outputFileC = this->_target + "_shrubbery";
+        const char * outputFileCStr = outputFileC.c_str();
+        std::ofstream outputFile(outputFileCStr, std::ios::trunc);
         std::cout << "Initializing " << executor.getName() << "'s Shrubberries! Check the file: " << this->_target + "_shrubberry" << std::endl;
         outputFile << std::endl;
         outputFile << "            ,@@@@@@@,                 ,@@@@@@@,                 ,@@@@@@@," << std::endl;

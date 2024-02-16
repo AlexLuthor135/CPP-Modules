@@ -13,6 +13,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <limits>
+#include <climits>
 #include <cmath>
 
 #ifndef SCALARCONVERTER_HPP

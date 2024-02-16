@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Base.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alappas <alappas@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/11 18:28:51 by alappas           #+#    #+#             */
-/*   Updated: 2024/02/11 18:41:06 by alappas          ###   ########.fr       */
+/*   Created: 2024/02/15 19:56:00 by alappas           #+#    #+#             */
+/*   Updated: 2024/02/16 21:46:13 by alappas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <ctime>
-#include <cstdlib>
-#include <typeinfo>
+#include "BitcoinExchange.hpp"
 
-#ifndef BASE_HPP
-# define BASE_HPP
+int	ft_error(int i)
+{
+	if (i == 0)
+		std::cerr << "Wrong amount of arguments" << std::endl;
+	if (i == 1)
+		std::cerr << "Wrong file path" << std::endl;
+	return (1);
+}
 
-class Base{
-    public:
-        virtual ~Base(){
-            std::cout << "Destructor init" << std::endl;
-        };
-};
-
-#endif
+int main(int argc, char **argv){
+    if (argc != 2)
+        return (ft_error(0));
+    std::ifstream inputFile(argv[1]);
+    if (!inputFile.is_open())
+        return (ft_error(1));
+    
+    
+}

@@ -6,7 +6,7 @@
 /*   By: alappas <alappas@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 03:17:20 by alappas           #+#    #+#             */
-/*   Updated: 2024/02/13 04:49:40 by alappas          ###   ########.fr       */
+/*   Updated: 2024/02/14 20:21:54 by alappas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,13 @@
 #include <exception>
 #include <cstdlib>
 #include <ctime>
+#include <algorithm>
 
 class Span{
 	private:
 		unsigned int _size;
-	public:
 		std::vector<int> _span;
+	public:
 		Span();
 		Span(unsigned int size);
 		Span(const Span & other);

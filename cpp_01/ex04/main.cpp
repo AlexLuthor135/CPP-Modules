@@ -37,7 +37,8 @@ int main(int argc, char **argv)
 	std::string		line;
 	std::string		filename(argv[1]);
 	std::string		outputFilename = filename + ".replace";
-	std::ofstream	outputFile(outputFilename);
+	const char*		outputFilenameC = outputFilename.c_str();
+	std::ofstream	outputFile(outputFilenameC);
 	std::string		linecopy;
 	while (std::getline(inputFile, line))
 	{

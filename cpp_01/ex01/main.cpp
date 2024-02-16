@@ -14,7 +14,7 @@
 
 int main()
 {
-    Zombie *horde = nullptr;
+    Zombie *horde = NULL;
 
     horde = horde->zombieHorde(3, "Zumbo");
     horde->hordedestroy(horde);

@@ -6,7 +6,7 @@
 /*   By: alappas <alappas@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 17:39:22 by alappas           #+#    #+#             */
-/*   Updated: 2024/02/14 18:38:56 by alappas          ###   ########.fr       */
+/*   Updated: 2024/02/14 20:47:34 by alappas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main(){
     std::cout << "========== MUTANT STACK ==========" << std::endl;
 
-	MutantStack<int> mstack;
+	MutantStack<int, std::vector<int> > mstack;
 	mstack.push(5); // 5
 	mstack.push(17); // 17, 5
 	std::cout << "Top: " << mstack.top() << std::endl;

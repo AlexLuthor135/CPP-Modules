@@ -27,7 +27,7 @@ class MutantStack : public std::stack<T>{
     iterator end() {return this->std::stack<T>::c.end();}
 };
 
-// template <typename T1, typename T2 = vector<int>>
+// template <typename T1, typename T2>
 // class SuperMutant : public std::stack<T1, T2>{
 //     public:
 //         SuperMutant(){};
