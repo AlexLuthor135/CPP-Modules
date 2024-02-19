@@ -17,20 +17,11 @@ bool	correct_date(std::string date){
 	int year, month, day;
 	char dash;
 
-	iss >> year >> dash >> month >> dash >> day;
+	if (!(iss >> year >> dash >> month >> dash >> day))
+		return (false);
 	if ((year == 2009 && (month == 1 && day < 2)))
 		return (false);
-	if (year == 2024 && month >=date | value
-2011-01-03 | 3
-2011-01-03 | 2
-2011-01-03 | 1
-2011-01-03 | 1.2
-2011-01-09 | 1
-2012-01-11 | -1
-2001-42-42
-2012-01-11 | 1
-2012-01-11 | 2147483648
-2021-02-29 | 1 2 && day > 15)
+	if (year == 2024 && month >= 2 && day > 15)
 		return (false);
 	if (((year < 2009 || year > 2024) || (month < 1 || month > 12) || (day < 1 || day > 31)))
 		return (false);
@@ -38,7 +29,7 @@ bool	correct_date(std::string date){
 		return (false);
 	if (month == 2)
 		{
-		if (((year % 4 == 0 && year % 100 != 0) || year % 400 == 0))
+		if ((year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)))
 		{
 			if (day > 29)
 				return (false);

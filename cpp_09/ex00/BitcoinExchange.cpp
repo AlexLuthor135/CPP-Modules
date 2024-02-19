@@ -43,7 +43,6 @@ void BitcoinExchange::InitData(){
         std::getline(iss, date, ',');
         iss >> value;
         this->_data[date] = value;
-        // std::cout << "CONST DATA: " << _data[date] << std::endl;
      }
 }
 
@@ -73,7 +72,6 @@ std::map<std::string, double>::iterator BitcoinExchange::FindData(std::string da
     int year, month, day;
     char dash;
     iss >> year >> dash >> month >> dash >> day;
-    // std::string new_date;
     std::ostringstream oss;
     std::string new_date;
     while (it == _data.end()){
