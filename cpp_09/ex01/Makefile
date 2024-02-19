@@ -1,5 +1,4 @@
-SRCS		=	main.cpp RPN.cpp
-
+SRCS		=	main.cpp
 CC_FLAGS		= -std=c++98 -Wall -Wextra -Werror -g
 CC				= c++
 OBJS_F			= obj/

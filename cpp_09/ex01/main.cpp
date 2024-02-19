@@ -6,7 +6,7 @@
 /*   By: alappas <alappas@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 20:43:57 by alappas           #+#    #+#             */
-/*   Updated: 2024/02/19 04:47:25 by alappas          ###   ########.fr       */
+/*   Updated: 2024/02/19 05:03:08 by alappas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,10 @@ void	rpn(std::string equation){
 			first = stack.top();
 			stack.pop();
 			second = stack.top();
+			if (stack.size() == 0){
+				std::cout << "Error" << std::endl;
+				exit (1);
+			}
 			stack.pop();
 			stack.push(operation(first, second, temp));
 		}
