@@ -6,7 +6,7 @@
 /*   By: alappas <alappas@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 19:46:51 by alappas           #+#    #+#             */
-/*   Updated: 2024/02/15 19:47:04 by alappas          ###   ########.fr       */
+/*   Updated: 2024/02/24 18:52:42 by alappas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ void BitcoinExchange::InitData(){
         std::getline(iss, date, ',');
         iss >> value;
         this->_data[date] = value;
-     }
+    }
+    inputFile.close();
 }
 
 void    date_modifier(int &day, int &month, int &year){

@@ -6,7 +6,7 @@
 /*   By: alappas <alappas@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 20:43:57 by alappas           #+#    #+#             */
-/*   Updated: 2024/02/19 05:03:08 by alappas          ###   ########.fr       */
+/*   Updated: 2024/02/24 20:37:12 by alappas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	operation(int first, int second, std::string sign){
 		std::cerr << "Can't divide a zero!" << std::endl;
 		exit (1);
 	}
+	if (operation == '/' && first == 0)
+		return (0);
 	switch(operation){
 		case '+':
 			if ((second > 0 && first > INT_MAX - second) ||
