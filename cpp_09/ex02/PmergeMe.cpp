@@ -6,7 +6,7 @@
 /*   By: alappas <alappas@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 22:14:39 by alappas           #+#    #+#             */
-/*   Updated: 2024/02/23 22:06:02 by alappas          ###   ########.fr       */
+/*   Updated: 2024/02/24 15:40:46 by alappas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,10 @@ PmergeMe<Container>::PmergeMe(char **argv){
 
 template <typename Container>
 void    PmergeMe<Container>::main_sort(){
+    if (_data.size() == 1){
+        std::cout << "Nothing to sort" << std::endl;
+        return ;
+    }
     std::clock_t start = std::clock();
     typedef std::pair<int, int> type_pair;
     std::vector<type_pair> pair_array = this->mergesort_pairs();
