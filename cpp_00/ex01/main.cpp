@@ -6,7 +6,7 @@
 /*   By: alappas <alappas@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 02:58:34 by alappas           #+#    #+#             */
-/*   Updated: 2024/01/26 22:09:52 by alappas          ###   ########.fr       */
+/*   Updated: 2024/05/11 01:55:39 by alappas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int main()
 		
 		std::cout << "Write the command: ADD, SEARCH or EXIT" << std::endl;
 		std::getline(std::cin, command);
+		if (std::cin.eof())
+			exit(0);
 		if (command == "ADD")
 		{
 			phonebook.create_contact(index++);

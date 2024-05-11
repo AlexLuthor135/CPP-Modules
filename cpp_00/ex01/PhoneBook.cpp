@@ -6,7 +6,7 @@
 /*   By: alappas <alappas@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 02:58:37 by alappas           #+#    #+#             */
-/*   Updated: 2024/03/03 21:31:13 by alappas          ###   ########.fr       */
+/*   Updated: 2024/05/11 01:55:10 by alappas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,8 @@ void	PhoneBook::print_contacts()
 	{
 			std::cout << "Please type a valid index value from 1 to 8" << std::endl;
 			std::cin >> index;
+			if (std::cin.eof())
+				exit(0);
 			std::getline(std::cin, check);
 			if (std::cin.fail())
 			{

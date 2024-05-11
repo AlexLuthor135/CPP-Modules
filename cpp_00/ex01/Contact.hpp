@@ -6,7 +6,7 @@
 /*   By: alappas <alappas@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 02:58:39 by alappas           #+#    #+#             */
-/*   Updated: 2024/01/26 00:24:59 by alappas          ###   ########.fr       */
+/*   Updated: 2024/05/11 01:54:37 by alappas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <iomanip>
 #include <cctype>
 #include <limits>
+#include <cstdlib>
 #include "PhoneBook.hpp"
 
 class Contact{

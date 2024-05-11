@@ -6,7 +6,7 @@
 /*   By: alappas <alappas@student.42wolfsburg.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 02:58:29 by alappas           #+#    #+#             */
-/*   Updated: 2024/03/05 18:47:32 by alappas          ###   ########.fr       */
+/*   Updated: 2024/05/11 01:56:55 by alappas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ std::string Contact::setfirstname()
     
     std::cout << "Type your first name" << std::endl;
     std::getline(std::cin, name);
+    if (std::cin.eof())
+		exit(0);
     if (name.size() > 0)
     {
         if (name.size() > 10)
@@ -67,6 +69,8 @@ std::string Contact::setlastname()
     
     std::cout << "Type your last name" << std::endl;
     std::getline(std::cin, lastname);
+    if (std::cin.eof())
+		exit(0);
     if (lastname.size() > 0)
     {
         if (lastname.size() > 10)
@@ -90,6 +94,8 @@ std::string Contact::setnickname()
     
     std::cout << "Type your nickname" << std::endl;
     std::getline(std::cin, nickname);
+    if (std::cin.eof())
+		exit(0);
     if (nickname.size() > 0)
     {
         if (nickname.size() > 10)
@@ -112,6 +118,8 @@ std::string Contact::setnumber()
     
     std::cout << "Type your number" << std::endl;
     std::getline(std::cin, number);
+    if (std::cin.eof())
+		exit(0);
     if (number.size() > 0)
         return (number);
     else
@@ -127,6 +135,8 @@ std::string Contact::setsecret()
     
     std::cout << "Type your secret" << std::endl;
     std::getline(std::cin, secret);
+    if (std::cin.eof())
+		exit(0);
     if (secret.size() > 0)
     {
         if (secret.size() > 10)
